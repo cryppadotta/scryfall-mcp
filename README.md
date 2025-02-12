@@ -26,24 +26,6 @@ The server can be run in two modes:
 1. Standard stdio mode (default)
 2. Server-Sent Events (SSE) mode with HTTP endpoints
 
-### Building from Docker
-
-```bash
-docker build -t mcp/scryfall .
-```
-
-Then you can run in stdio mode:
-
-```bash
-docker run -i --rm mcp/scryfall
-```
-
-Or in SSE mode:
-
-```bash
-docker run -i --rm -p 3000:3000 mcp/scryfall --sse
-```
-
 ### Using NPX
 
 If you have Node.js installed locally:
@@ -102,6 +84,24 @@ Or with npx:
     }
   }
 }
+```
+
+### Building from Docker
+
+```bash
+docker build -t mcp/scryfall .
+```
+
+Then you can run in stdio mode:
+
+```bash
+docker run -i --rm mcp/scryfall
+```
+
+Or in SSE mode:
+
+```bash
+docker run -i --rm -p 3000:3000 mcp/scryfall --sse
 ```
 
 ## License
