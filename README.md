@@ -2,6 +2,8 @@
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for interacting with the [Scryfall](https://scryfall.com/docs/api) API. It provides tools to look up Magic: The Gathering card details, card rulings, and price information.
 
+![Scryfall MCP Server](img/sorcerer.jpg)
+
 ## Features
 
 - **search_cards**  
@@ -32,11 +34,10 @@ If you have Node.js installed locally:
 
 ```bash
 # Stdio mode
-cd /path/to/this/repo
-npx -y @modelcontextprotocol/server-scryfall
+npx scryfall-mcp-server
 
 # SSE mode
-npx -y @modelcontextprotocol/server-scryfall --sse
+npx scryfall-mcp-server --sse
 ```
 
 ### Connecting to the Server
@@ -80,7 +81,7 @@ Or with npx:
   "mcpServers": {
     "scryfall": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-scryfall"]
+      "args": ["scryfall-mcp-server"]
     }
   }
 }
