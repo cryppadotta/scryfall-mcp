@@ -1,5 +1,5 @@
 {
-  "name": "@modelcontextprotocol/server-scryfall",
+  "name": "server-scryfall",
   "version": "0.1.0",
   "description": "MCP server for interacting with the Scryfall MTG API",
   "license": "MIT",

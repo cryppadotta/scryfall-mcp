@@ -442,7 +442,7 @@ async function runServer() {
 
   if (argv.sse) {
     const httpServer = createServer(
-      async (req: IncomingMessage, res: ServerResponse) => {
+      async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
         const url = parse(req.url ?? "", true);
 
         if (req.method === "GET" && url.pathname === "/sse") {
@@ -470,6 +470,9 @@ async function runServer() {
           console.error(
             `New SSE connection established (session: ${transport.sessionId})`
           );
+
+          // Return here - the response will be kept open for SSE
+          return;
         } else if (req.method === "POST" && url.pathname === "/messages") {
           // Client sending an MCP message over POST
           const sessionId = url.query.sessionId as string;
@@ -477,14 +480,17 @@ async function runServer() {
 
           if (!record) {
             res.writeHead(404, "Unknown session");
-            return res.end();
+            res.end();
+            return;
           }
 
           // Forward the POST body to this session's transport
           await record.transport.handlePostMessage(req, res);
+          return;
         } else {
           res.writeHead(404, "Not Found");
           res.end();
+          return;
         }
       }
     );
