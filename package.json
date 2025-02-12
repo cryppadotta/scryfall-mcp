@@ -1,5 +1,5 @@
 {
-  "name": "server-scryfall",
+  "name": "scryfall-mcp-server",
   "version": "0.1.0",
   "description": "MCP server for interacting with the Scryfall MTG API",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "bugs": "https://github.com/modelcontextprotocol/servers/issues",
   "type": "module",
   "bin": {
-    "mcp-server-scryfall": "dist/index.js"
+    "scryfall-mcp-server": "dist/index.js"
   },
   "files": [
     "dist"
