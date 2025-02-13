@@ -4,6 +4,8 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for in
 
 ![Scryfall MCP Server](img/sorcerer.jpg)
 
+<a href="https://glama.ai/mcp/servers/jdaj6hj69s"><img width="380" height="200" src="https://glama.ai/mcp/servers/jdaj6hj69s/badge" alt="Scryfall Server MCP server" /></a>
+
 ## Features
 
 - **search_cards**  
