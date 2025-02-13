@@ -1,5 +1,7 @@
 # Scryfall MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@cryppadotta/scryfall-mcp)](https://smithery.ai/server/@cryppadotta/scryfall-mcp)
+
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for interacting with the [Scryfall](https://scryfall.com/docs/api) API. It provides tools to look up Magic: The Gathering card details, card rulings, and price information.
 
 ![Scryfall MCP Server](img/sorcerer.jpg)
@@ -38,6 +40,14 @@ npx scryfall-mcp-server
 
 # SSE mode
 npx scryfall-mcp-server --sse
+```
+
+### Installing via Smithery
+
+To install Scryfall MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@cryppadotta/scryfall-mcp):
+
+```bash
+npx -y @smithery/cli install @cryppadotta/scryfall-mcp --client claude
 ```
 
 ### Connecting to the Server
