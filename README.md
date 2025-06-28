@@ -4,6 +4,12 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for in
 
 ![Scryfall MCP Server](img/sorcerer.jpg)
 
+## Improvements
+
+This repo is forked from [cryppadotta/scryfall-mcp](https://github.com/cryppadotta/scryfall-mcp), and I've made some improvements over the original:
+
+- Added a `get_cards_by_names` tool for more efficient parallel querying of many cards at once
+
 ## Features
 
 - **search_cards**  
@@ -12,6 +18,8 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for in
   Retrieve a card directly via its Scryfall UUID.
 - **get_card_by_name**  
   Retrieve a card by exact English name.
+- **get_cards_by_names**
+  Retrieve a list of cards by their exact English names.
 - **random_card**  
   Get a random card from the entire Scryfall database.
 - **get_rulings**  
