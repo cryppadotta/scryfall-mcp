@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/cryppadotta-scryfall-mcp-badge.png)](https://mseep.ai/app/cryppadotta-scryfall-mcp)
+
 # Scryfall MCP Server
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for interacting with the [Scryfall](https://scryfall.com/docs/api) API. It provides tools to look up Magic: The Gathering card details, card rulings, and price information.
