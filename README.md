@@ -6,20 +6,39 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for in
 
 ## Features
 
-- **search_cards**  
+### Card Tools
+- **search_cards**
   Perform a text-based search on Scryfall. Returns a list of matching cards.
-- **get_card_by_id**  
+- **get_card_by_id**
   Retrieve a card directly via its Scryfall UUID.
-- **get_card_by_name**  
+- **get_card_by_name**
   Retrieve a card by exact English name.
-- **random_card**  
+- **random_card**
   Get a random card from the entire Scryfall database.
-- **get_rulings**  
+- **get_rulings**
   Retrieve official rulings for a card, which may clarify card interactions or rules.
-- **get_prices_by_id**  
+
+### Price Tools
+- **get_prices_by_id**
   Retrieve current pricing information (USD, USD foil, EUR, TIX) for a given card by Scryfall ID.
-- **get_prices_by_name**  
+- **get_prices_by_name**
   Retrieve current pricing information (USD, USD foil, EUR, TIX) for a given card by exact name.
+
+### Set Tools
+- **list_sets**
+  Retrieve a list of all Magic: The Gathering sets from Scryfall.
+- **get_set_by_code**
+  Retrieve a set by its unique 3-6 letter code (e.g., 'aer' for Aether Revolt, 'dom' for Dominaria).
+- **get_set_by_id**
+  Retrieve a set by its Scryfall UUID.
+- **get_set_by_tcgplayer_id**
+  Retrieve a set by its TCGplayer group ID.
+
+### Symbology Tools
+- **list_symbology**
+  Retrieve all card symbols available in Scryfall's database (mana symbols, tap symbol, etc.).
+- **parse_mana_cost**
+  Parse a mana cost string (e.g., '{2}{W}{U}') and get information about it including converted mana cost, colors, and whether it's colorless/mono/multicolored.
 
 ## Usage
 
@@ -103,6 +122,29 @@ Or in SSE mode:
 
 ```bash
 docker run -i --rm -p 3000:3000 mcp/scryfall --sse
+```
+
+## Development
+
+### Running Tests
+
+The project includes a comprehensive Jest test suite with 60 tests covering tool definitions, handlers, and response handling.
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+### Building
+
+```bash
+npm run build
 ```
 
 ## License
