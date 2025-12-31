@@ -17,21 +17,27 @@
     "build": "tsc && shx chmod +x dist/*.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "dev": "NODE_NO_WARNINGS=1 tsx watch index.ts"
+    "dev": "NODE_NO_WARNINGS=1 tsx watch index.ts",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
+    "test:coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.0.1",
+    "express": "^4.18.2",
     "node-fetch": "^3.3.1",
-    "yargs": "^17.7.2",
-    "express": "^4.18.2"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22",
     "@types/node-fetch": "^2.6.2",
     "@types/yargs": "^17.0.32",
-    "@types/express": "^4.17.21",
+    "jest": "^30.2.0",
     "shx": "^0.3.4",
-    "typescript": "^5.6.2",
-    "tsx": "^4.7.0"
+    "ts-jest": "^29.4.6",
+    "tsx": "^4.7.0",
+    "typescript": "^5.6.2"
   }
 }
